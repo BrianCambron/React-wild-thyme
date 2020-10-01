@@ -10,12 +10,17 @@ class FoodItem extends Component{
       descripion: '',
       url:'',
     }
+  this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(food){
+    this.props.addToOrder(food)
+    console.log(food);
   }
   render(){
-    const foodlist = this.props.foodlist.map((food, index) => <li className="list-group-item col-12 col-md-4 list-style" key={index}>{food.name}<img className="foodpic"src={food.url} alt='#'/><p>{food.descripion}</p><button type="button">{food.price}</button></li>);
+    const foodlist = this.props.foodlist.map((food, index) => <li className="list-group-item col-12 col-md-4 list-style" key={index}>{food.name}<img className="foodpic"src={food.url} alt='#'/><p>{food.descripion}</p><button type="button" onClick={() => this.handleClick(food)}>{food.price}</button></li>);
     console.log(this.props.foodlist);
     return(
-  <ul className="list-group list-group-flush">
+  <ul className="list-group">
     {foodlist}
   </ul>
     )

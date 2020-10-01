@@ -1,0 +1,8 @@
+.left-side{
+  position: relative;
+}
+.right-side{
+  position: absolute;
+  top:0%;
+  left: 50%;
+}

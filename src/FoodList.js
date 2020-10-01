@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import FoodItem from './components/FoodItem'
-import './App.css';
+import Order from './components/Order'
+import './FoodList.css';
 
 class FoodList extends Component {
   constructor(props){
     super(props);
     this.state = {
-    foodlist: [{}]
+    foodlist: [],
+    ordereditems: [],
     }
+  this.addToOrder = this.addToOrder.bind(this);
   }
   componentDidMount(){
     const foodlist = [{
@@ -37,18 +40,27 @@ class FoodList extends Component {
   ];
   this.setState({foodlist});
   }
+
+  addToOrder(fooditem){
+    const order = [...this.state.ordereditems, fooditem];
+    this.setState({ordereditems: order});
+  }
+
   render(){
     return(
       <React.Fragment>
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-dark bg-dark">
         <div className="navbar-brand">Wild Thyme Gourmet</div>
         <form className="form-inline">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </nav>
-      <div className="container">
-      <FoodItem foodlist={this.state.foodlist}/>
+      <div className="col-12 left-side">
+      <FoodItem foodlist={this.state.foodlist} addToOrder={this.addToOrder}/>
+        <div className="col-12 right-side">
+        <Order order={this.state.ordereditems}/>
+        </div>
       </div>
       </React.Fragment>
     )

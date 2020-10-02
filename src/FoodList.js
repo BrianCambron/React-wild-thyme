@@ -53,10 +53,9 @@ class FoodList extends Component {
   order.splice(index, 1);
   this.setState({ordereditems: order});
   }
-  editOrderItem(index, updatedOrder){
-    const order = [...this.state.ordereditems];
-    order[index] = updatedOrder;
-    this.setState({ordereditems: order})
+  editOrderItem(orderItem, instructions){
+  // this.state.ordereditems.push(this.props.specialinstructions)
+  console.log(orderItem, instructions)
   }
   render(){
     return(

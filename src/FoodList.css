@@ -2,7 +2,11 @@
   position: relative;
 }
 .right-side{
+  display: inline-flex;
   position: absolute;
   top:0%;
   left: 50%;
+}
+.right-side h5{
+  margin-right: 15px;
 }

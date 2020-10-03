@@ -54,8 +54,10 @@ class FoodList extends Component {
   this.setState({ordereditems: order});
   }
   editOrderItem(orderItem, instructions){
-  // this.state.ordereditems.push(this.props.specialinstructions)
-  console.log(orderItem, instructions)
+  // console.log(orderItem, instructions);
+  // console.log(orderItem.specialinstructions = instructions);
+  orderItem.specialinstructions = instructions
+  console.log(this.state.ordereditems);
   }
   render(){
     return(

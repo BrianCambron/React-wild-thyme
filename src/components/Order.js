@@ -37,6 +37,9 @@ class Order extends Component{
     return(
       <div>
         ${subtotal}
+        <form>
+        <button type="submit" className="btn btn-primary">Submit Order</button>
+        </form>
         {order}
      </div>
     )

@@ -31,7 +31,7 @@ class Order extends Component{
 
   render(){
     const order = this.props.order.map((orderItem, index) => <OrderItem key={index} orderItem={orderItem} deleteOrderItem={this.props.deleteOrderItem} editOrderItem={this.props.editOrderItem}/>)
-    const subtotal = this.props.order.reduce((total, order) => total + order.price, 0);
+    const subtotal = this.props.order.reduce((total, order) => total + order.price, 0).toFixed(2);
     console.log(subtotal);
     console.log(this.props.order);
     return(

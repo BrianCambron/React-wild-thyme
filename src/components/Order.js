@@ -35,13 +35,17 @@ class Order extends Component{
     console.log(subtotal);
     console.log(this.props.order);
     return(
-      <div>
-        ${subtotal}
-        <form>
-        <button type="submit" className="btn btn-primary">Submit Order</button>
-        </form>
+      <React.Fragment>
+      <div className="subtotal">
+      ${subtotal}
+      </div>
+      <form>
+      <button type="submite" className="btn btn-primary submit-order">Submit Order</button>
+      </form>
+      <ul className="list-group order">
         {order}
-     </div>
+     </ul>
+     </React.Fragment>
     )
   }
 }

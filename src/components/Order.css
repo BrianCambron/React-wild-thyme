@@ -1,3 +1,17 @@
 .specialinstructions{
   margin-left: 10px;
 }
+.order{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.order > li {
+  margin-left: 2px;
+}
+.subtotal{
+  color: white;
+}
+.submit-order{
+  margin-top: 5px;
+}

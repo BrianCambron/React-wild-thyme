@@ -1,12 +1,15 @@
-.left-side{
-  position: relative;
+.navbar-dark .navbar-brand{
+color: #F13C32;
 }
-.right-side{
-  display: inline-flex;
-  position: absolute;
-  top:0%;
-  left: 50%;
+.logo{
+  width: 6%;
+  border-radius: 4px;
+  margin-left: 20px;
 }
-.right-side h5{
-  margin-right: 15px;
+.Order-heading{
+  color: white;
+}
+.Menu-heading{
+  margin-top: 5px;
+  color: white;
 }

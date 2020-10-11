@@ -63,19 +63,21 @@ class FoodList extends Component {
     return(
       <React.Fragment>
       <nav className="navbar navbar-dark bg-dark">
-        <div className="navbar-brand">Wild Thyme Gourmet</div>
+        <div className="navbar-brand">Wild Thyme Gourmet
+        <img className="logo"src="https://media-cdn.tripadvisor.com/media/photo-s/03/a4/eb/25/wild-thyme.jpg" alt="logo"/>
+        </div>
         <form className="form-inline">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </nav>
       <div className="col-12 left-side">
-      <h5>Menu</h5>
+      <h5 className="Menu-heading">Menu</h5>
       <FoodItem foodlist={this.state.foodlist} addToOrder={this.addToOrder}/>
-        <div className="col-12 right-side">
-        <h5>Order</h5>
-        <Order order={this.state.ordereditems} deleteOrderItem={this.deleteOrderItem} editOrderItem={this.editOrderItem}/>
-        </div>
+      </div>
+      <div className="col-12 right-side">
+      <h5 className="Order-heading">Order</h5>
+      <Order order={this.state.ordereditems} deleteOrderItem={this.deleteOrderItem} editOrderItem={this.editOrderItem}/>
       </div>
       </React.Fragment>
     )

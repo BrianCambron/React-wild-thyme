@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://thejewishnews.com/wp-content/uploads/2018/11/GettyImages-862433484.jpg');
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 code {
